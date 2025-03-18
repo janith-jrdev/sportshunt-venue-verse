@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { LogOut, User, Plus, List, Search } from 'lucide-react';
+import { LogOut, User, Plus, List, Search, Trophy } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const { user, logout } = useAuth();
@@ -21,11 +21,12 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-sportBlue text-white shadow-md">
+    <nav className="bg-gradient-to-r from-sportBlue to-sportGreen text-white shadow-md">
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-8">
-            <Link to="/" className="text-2xl font-bold">
+            <Link to="/" className="text-2xl font-bold flex items-center">
+              <Trophy className="mr-2 h-6 w-6" />
               SportHunt
             </Link>
             

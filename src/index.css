@@ -14,15 +14,18 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 152 61% 40%;
+    /* Vibrant teal-green primary */
+    --primary: 160 84% 39%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 226 71% 40%;
+    /* Bright blue secondary */
+    --secondary: 199 95% 44%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
+    /* Energetic orange accent */
     --accent: 24 94% 53%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
@@ -33,7 +36,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -55,15 +58,18 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 152 61% 40%;
+    /* Vibrant teal-green primary */
+    --primary: 160 84% 39%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 226 71% 40%;
+    /* Bright blue secondary */
+    --secondary: 199 95% 44%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
+    /* Energetic orange accent */
     --accent: 24 94% 53%;
     --accent-foreground: 210 40% 98%;
 
@@ -118,5 +124,18 @@
   
   .btn-accent {
     @apply bg-sportOrange text-white hover:bg-opacity-90 transition-colors;
+  }
+  
+  /* New sporty UI components */
+  .sport-gradient {
+    @apply bg-gradient-to-br from-sportBlue to-sportGreen;
+  }
+  
+  .energy-gradient {
+    @apply bg-gradient-to-r from-sportOrange to-sportRed;
+  }
+  
+  .card-sport {
+    @apply border border-opacity-20 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 bg-white;
   }
 }

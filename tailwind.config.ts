@@ -63,9 +63,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				sportGreen: '#10B981',
-				sportBlue: '#1E40AF',
-				sportOrange: '#F97316'
+				// Updated sporty color palette
+				sportGreen: '#10B981', // Vibrant green for primary sport color
+				sportBlue: '#0EA5E9', // Bright blue for secondary sport color
+				sportOrange: '#F97316', // Warm orange for accent
+				sportRed: '#EF4444', // Vibrant red for energy
+				sportPurple: '#8B5CF6', // Vivid purple for excitement
+				sportPink: '#EC4899', // Magenta pink for vibrancy
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

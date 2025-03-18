@@ -1,3 +1,4 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,6 +6,7 @@
   text-align: center;
 }
 
+/* Updated sport-themed styling */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -12,10 +14,10 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #10B981aa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #0EA5E9aa);
 }
 
 @keyframes logo-spin {
@@ -35,8 +37,27 @@
 
 .card {
   padding: 2em;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, rgba(16,185,129,0.1) 0%, rgba(14,165,233,0.1) 100%);
 }
 
 .read-the-docs {
   color: #888;
+}
+
+/* Sports-themed animations */
+.pulse-sport {
+  animation: pulse-sport 2s infinite;
+}
+
+@keyframes pulse-sport {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
 }
