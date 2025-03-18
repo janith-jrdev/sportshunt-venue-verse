@@ -5,7 +5,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { FormLabel, FormMessage } from '@/components/ui/form';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { toast } from 'sonner';
 import Navbar from '../components/Navbar';
@@ -58,80 +58,74 @@ const Register = () => {
           
           <form onSubmit={handleSubmit}>
             <CardContent className="space-y-4">
-              <FormField>
-                <FormItem>
-                  <FormLabel>Full Name</FormLabel>
-                  <Input 
-                    placeholder="John Doe" 
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                  />
-                  <FormMessage />
-                </FormItem>
-              </FormField>
+              <div className="space-y-2">
+                <FormLabel htmlFor="name">Full Name</FormLabel>
+                <Input 
+                  id="name"
+                  placeholder="John Doe" 
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+                <FormMessage />
+              </div>
               
-              <FormField>
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <Input 
-                    type="email" 
-                    placeholder="your@email.com" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                  <FormMessage />
-                </FormItem>
-              </FormField>
+              <div className="space-y-2">
+                <FormLabel htmlFor="email">Email</FormLabel>
+                <Input 
+                  id="email"
+                  type="email" 
+                  placeholder="your@email.com" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <FormMessage />
+              </div>
               
-              <FormField>
-                <FormItem>
-                  <FormLabel>Password</FormLabel>
-                  <Input 
-                    type="password" 
-                    placeholder="••••••••" 
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                  />
-                  <FormMessage />
-                </FormItem>
-              </FormField>
+              <div className="space-y-2">
+                <FormLabel htmlFor="password">Password</FormLabel>
+                <Input 
+                  id="password"
+                  type="password" 
+                  placeholder="••••••••" 
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+                <FormMessage />
+              </div>
               
-              <FormField>
-                <FormItem>
-                  <FormLabel>Confirm Password</FormLabel>
-                  <Input 
-                    type="password" 
-                    placeholder="••••••••" 
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                    required
-                  />
-                  <FormMessage />
-                </FormItem>
-              </FormField>
+              <div className="space-y-2">
+                <FormLabel htmlFor="confirmPassword">Confirm Password</FormLabel>
+                <Input 
+                  id="confirmPassword"
+                  type="password" 
+                  placeholder="••••••••" 
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  required
+                />
+                <FormMessage />
+              </div>
               
-              <FormField>
-                <FormItem>
-                  <FormLabel>Account Type</FormLabel>
-                  <RadioGroup 
-                    defaultValue="player"
-                    onValueChange={(value) => setIsHost(value === 'host')}
-                  >
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="player" id="player" />
-                      <FormLabel htmlFor="player" className="cursor-pointer">Player (Book venues)</FormLabel>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="host" id="host" />
-                      <FormLabel htmlFor="host" className="cursor-pointer">Host (List venues)</FormLabel>
-                    </div>
-                  </RadioGroup>
-                  <FormMessage />
-                </FormItem>
-              </FormField>
+              <div className="space-y-2">
+                <FormLabel>Account Type</FormLabel>
+                <RadioGroup 
+                  defaultValue="player"
+                  onValueChange={(value) => setIsHost(value === 'host')}
+                >
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="player" id="player" />
+                    <label htmlFor="player" className="cursor-pointer">Player (Book venues)</label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="host" id="host" />
+                    <label htmlFor="host" className="cursor-pointer">Host (List venues)</label>
+                  </div>
+                </RadioGroup>
+                <FormMessage />
+              </div>
             </CardContent>
             
             <CardFooter className="flex flex-col space-y-4">

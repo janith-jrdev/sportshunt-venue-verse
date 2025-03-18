@@ -5,7 +5,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { toast } from 'sonner';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -48,33 +48,31 @@ const Login = () => {
           
           <form onSubmit={handleSubmit}>
             <CardContent className="space-y-4">
-              <FormField>
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <Input 
-                    type="email" 
-                    placeholder="your@email.com" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                  <FormMessage />
-                </FormItem>
-              </FormField>
+              <div className="space-y-2">
+                <FormLabel htmlFor="email">Email</FormLabel>
+                <Input 
+                  id="email"
+                  type="email" 
+                  placeholder="your@email.com" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <FormMessage />
+              </div>
               
-              <FormField>
-                <FormItem>
-                  <FormLabel>Password</FormLabel>
-                  <Input 
-                    type="password" 
-                    placeholder="••••••••" 
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                  />
-                  <FormMessage />
-                </FormItem>
-              </FormField>
+              <div className="space-y-2">
+                <FormLabel htmlFor="password">Password</FormLabel>
+                <Input 
+                  id="password"
+                  type="password" 
+                  placeholder="••••••••" 
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+                <FormMessage />
+              </div>
             </CardContent>
             
             <CardFooter className="flex flex-col space-y-4">
