@@ -5,7 +5,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -49,7 +49,7 @@ const Login = () => {
           <form onSubmit={handleSubmit}>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <FormLabel htmlFor="email">Email</FormLabel>
+                <Label htmlFor="email">Email</Label>
                 <Input 
                   id="email"
                   type="email" 
@@ -58,11 +58,10 @@ const Login = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-                <FormMessage />
               </div>
               
               <div className="space-y-2">
-                <FormLabel htmlFor="password">Password</FormLabel>
+                <Label htmlFor="password">Password</Label>
                 <Input 
                   id="password"
                   type="password" 
@@ -71,7 +70,6 @@ const Login = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   required
                 />
-                <FormMessage />
               </div>
             </CardContent>
             
