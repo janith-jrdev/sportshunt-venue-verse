@@ -83,7 +83,8 @@ const AddVenue = () => {
       });
       
       toast.success('Venue created successfully!');
-      navigate(`/host/venue/${newVenue.id}`);
+      // Navigate to add-turf page for this venue
+      navigate(`/host/venue/${newVenue.id}/create-turf`);
     } catch (error) {
       console.error('Failed to create venue:', error);
       toast.error('Failed to create venue. Please try again.');

@@ -16,6 +16,7 @@ import VenueDetail from "./pages/VenueDetail";
 import TurfDetail from "./pages/TurfDetail";
 import HostDashboard from "./pages/host/HostDashboard";
 import AddVenue from "./pages/host/AddVenue";
+import AddTurf from "./pages/host/AddTurf";
 
 // Protected Route Component
 const ProtectedRoute = ({ 
@@ -79,6 +80,14 @@ const App = () => (
               element={
                 <ProtectedRoute requiresAuth requiresHost>
                   <AddVenue />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/host/venue/:venueId/create-turf" 
+              element={
+                <ProtectedRoute requiresAuth requiresHost>
+                  <AddTurf />
                 </ProtectedRoute>
               } 
             />
